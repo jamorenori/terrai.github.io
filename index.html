@@ -37,13 +37,13 @@
             padding: 15px 20px; /* Reducido el padding vertical */
             display: flex;
             justify-content: center;
-            gap: 20px; /* Reducido el espacio entre enlaces */
+            gap: 30px; /* Espacio entre los enlaces */
         }
 
         nav.top-navigation a {
             color: #a9bca9;
             text-decoration: none;
-            font-size: 0.9rem; /* Reducido el tamaño de la fuente */
+            font-size: 1rem; /* Reducido el tamaño de la fuente */
             transition: color 0.3s ease;
         }
 
@@ -164,7 +164,7 @@
             border: none;
         }
 
-        .contact-section, .about-us-section, .services-section, .works-section {
+        .contact-section, .about-us-section, .services-section {
             margin-top: 50px; /* Reducido el margen superior */
             margin-bottom: 50px; /* Reducido el margen inferior */
             color: #aaa;
@@ -172,7 +172,7 @@
             text-align: center;
         }
 
-        .contact-section h2, .about-us-section h2, .services-section h2, .works-section h2 {
+        .contact-section h2, .about-us-section h2, .services-section h2 {
             font-size: 1.8rem; /* Reducido el tamaño del título de sección */
             color: #98fb98;
             margin-bottom: 20px;
@@ -181,7 +181,7 @@
             font-weight: bold;
         }
 
-        .contact-section p, .about-us-section p, .services-section p, .works-section p {
+        .contact-section p, .about-us-section p, .services-section p {
             font-size: 0.95rem; /* Reducido el tamaño del párrafo */
             line-height: 1.6;
             color: #b8cbb8;
@@ -253,9 +253,12 @@
             text-align: center;
         }
 
+        .logos-section a {
+            margin: 0 10px;
+        }
+
         .logos-section img {
             max-height: 30px; /* Reducido la altura máxima */
-            margin: 0 10px; /* Reducido el margen horizontal */
             filter: grayscale(80%) brightness(1.5);
             opacity: 0.7;
         }
@@ -286,6 +289,10 @@
                 padding: 10px 0;
             }
 
+            nav.top-navigation a {
+                font-size: 0.9rem;
+            }
+
             h1.main-title {
                 font-size: 1.8rem;
             }
@@ -310,6 +317,14 @@
             .contact-form {
                 padding: 15px;
             }
+
+            .logos-section a {
+                margin: 5px;
+            }
+
+            .logos-section img {
+                max-height: 25px;
+            }
         }
     </style>
 </head>
@@ -317,11 +332,8 @@
 
     <nav class="top-navigation">
         <a href="#services-section">Services</a>
-        <a href="#works-section">Works</a>
         <a href="#about-us-section">About Us</a>
-        <a href="#campus">Campus TerrAI</a>
         <a href="#contact-section">Contact</a>
-        <a href="#blog">Blog</a>
     </nav>
 
     <header class="header">
@@ -334,54 +346,44 @@
     </header>
 
     <main>
-        <section id="value-proposition" class="section value-proposition" aria-labelledby="value-proposition-title">
-            <h2 id="value-proposition-title" class="section-title">Our Value Proposition</h2>
-            <p>We offer innovative solutions that provide key <strong>territorial information</strong> efficiently and accessibly:</p>
+        <section id="services-section" class="services-section">
+            <h2 class="section-title">Our Services</h2>
+            <p>At TerrAI, we offer a range of cutting-edge services leveraging the power of Artificial Intelligence for territorial analysis:</p>
             <ul>
-                <li><strong>Territorial Evolution Reports:** Detailed analysis with downloadable maps (PDF, GeoTIFF) to understand <strong>land use changes</strong>.</li>
-                <li><strong>Interactive WebGIS Viewer:** Intuitive online platform to visualize and analyze <strong>geospatial data</strong> without specialized software.</li>
-                <li><strong>Accessible Geospatial Intelligence:** <strong>AI-processed data</strong>, easy to understand and use, even without technical GIS expertise.</li>
-                <li><strong>AI-Driven Analysis:** Precise detection of changes and <strong>land use classification</strong> using <strong>machine learning</strong> on <strong>satellite imagery</strong> for comprehensive territorial understanding.</li>
-                <li><strong>100% Online Solution:** Access information from any browser, facilitating collaboration and remote analysis.</li>
+                <li><strong>Land Use Change Detection:</strong> Identify and analyze changes in land cover over time with high accuracy.</li>
+                <li><strong>Geospatial Data Visualization:</strong> Interactive and insightful visualization of complex territorial data.</li>
+                <li><strong>Custom AI Model Development:</strong> Tailored AI solutions to address specific territorial challenges.</li>
+                <li><strong>Environmental Monitoring:</strong> Track and assess environmental changes using satellite and geospatial data.</li>
+                <li><strong>Urban Planning Support:</strong> Provide data-driven insights for sustainable urban development.</li>
             </ul>
         </section>
 
-        <section id="client-segments" class="section client-segments" aria-labelledby="client-segments-title">
-            <h2 id="client-segments-title" class="section-title">Our Clients</h2>
-            <p>Our solutions are designed for:</p>
-            <ul>
-                <li><strong>Local Governments and Public Entities:** For <strong>urban planning</strong>, <strong>land management</strong>, <strong>change control</strong>, and regulatory justification.</li>
-                <li><strong>Urban Planners and Architects:** For visualizing project areas, context analysis, and informed decision-making in projects.</li>
-                <li><strong>Environmental Consultants:** For <strong>impact studies</strong>, <strong>risk analysis</strong>, and monitoring <strong>environmental changes</strong>.</li>
-                <li><strong>Construction and Real Estate Companies:** For identifying opportunities, market analysis, and evaluating <strong>territorial development</strong>.</li>
-            </ul>
+        <section id="about-us-section" class="about-us-section">
+            <h2 class="section-title">About Us</h2>
+            <p>TerrAI is a team of experts in Artificial Intelligence, Remote Sensing, and GIS, dedicated to transforming geospatial data into actionable intelligence. Our mission is to empower governments, businesses, and organizations with the tools they need to understand and shape the future of our territories.</p>
+            <p>We believe in the power of innovation and collaboration to create a more sustainable and informed world.</p>
+            <div class="logos-section">
+                <a href="https://www.linkedin.com/company/terraigeo" target="_blank" rel="noopener noreferrer"><img src="assets/linkedin_logo.png" alt="LinkedIn"></a>
+                <a href="https://earthengine.google.com/" target="_blank" rel="noopener noreferrer"><img src="assets/google_earth_engine_logo.png" alt="Google Earth Engine"></a>
+            </div>
         </section>
 
-        <section id="key-activities" class="section key-activities" aria-labelledby="key-activities-title">
-            <h2 id="key-activities-title" class="section-title">How We Do It (Key Activities)</h2>
-            <p>Our main activities include:</p>
-            <ul>
-                <li><strong>Advanced Satellite Imagery Processing:** Utilizing <strong>artificial intelligence</strong> to extract valuable information.</li>
-                <li><strong>WebGIS Platform Development and Maintenance:** Creating an intuitive and accessible tool.</li>
-                <li><strong>Continuous Data and AI Model Updates:** Ensuring accurate information and optimized <strong>machine learning</strong> models.</li>
-                <li><strong>Customer Support:** Offering assistance to ensure a successful user experience.</li>
-            </ul>
+        <section id="contact-section" class="contact-section">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="description">Have any questions or want to learn more? Reach out to us!</p>
+            <p>
+                📧 Email: <a href="mailto:contacto@terraigeo.com">contacto@terraigeo.com</a><br>
+                🔗 LinkedIn: <a href="https://www.linkedin.com/company/terraigeo" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </p>
+            <form class="contact-form">
+                <label for="contact-name">Name</label>
+                <input type="text" id="contact-name" name="name" required>
+                <label for="contact-email">Email</label>
+                <input type="email" id="contact-email" name="email" required>
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" name="message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </section>
 
-        <section id="key-resources" class="section key-resources" aria-labelledby="key-resources-title">
-            <h2 id="key-resources-title" class="section-title">Our Key Resources</h2>
-            <p>We rely on:</p>
-            <ul>
-                <li><strong>Cloud Infrastructure:** Utilizing powerful platforms for data processing and storage.</li>
-                <li><strong>Artificial Intelligence Algorithms:** Advanced models for classification and change detection.</li>
-                <li><strong>Specialized Team:** Professionals with expertise in <strong>remote sensing</strong>, <strong>AI</strong>, and <strong>GIS development</strong>.</li>
-            </ul>
-        </section>
-
-        <section id="revenue-streams" class="section revenue-streams" aria-labelledby="revenue-streams-title">
-            <h2 id="revenue-streams-title" class="section-title">How We Generate Value (Revenue Streams)</h2>
-            <p>We offer different ways to access our technology:</p>
-            <ul>
-                <li><strong>Licenses per Municipality:** Access to reports and viewer for a specific geographic area.</li>
-                <li><strong>Licenses with Updates:** Subscriptions with periodic reports and ongoing support.</li>
-                <li><strong>Enterprise Licenses
+        <div class="video-container">
