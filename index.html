@@ -1,136 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TerrAI - AI-Driven Land Use Classification</title>
-  <meta name="description" content="TerrAI: AI-powered solutions for land use classification and change detection. Designed for local governments, urban planners, and environmental experts.">
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-  <style>
-    /* CSS Reset (optional, but recommended) */
-    body, h1, h2, p, a, img, iframe {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      font: inherit;
-      color: inherit;
-      background-color: transparent;
-      box-sizing: border-box; /* Important for consistent sizing */
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TerrAI - Inteligencia Artificial para el Análisis Territorial</title>
+    <meta name="description" content="TerrAI: Soluciones de inteligencia artificial para el análisis y seguimiento de la evolución territorial. Información útil para ayuntamientos, técnicos y empresas del sector.">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <style>
+        /* Estilos CSS (manteniendo y adaptando los tuyos) */
+        body, h1, h2, h3, p, a, img, iframe, ul, li {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font: inherit;
+            color: inherit;
+            background-color: transparent;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0f0f0f;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: start;
-      min-height: 100vh;
-      text-align: center;
-      padding: 20px;
-    }
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f0f0f;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
 
-    /* Header Section */
-    .header {
-      margin-top: 30px;
-    }
-
-    .logo {
-      max-width: 200px;
-    }
-
-    /* Main Content Section */
-    .main-content {
-      margin-top: 20px;
-      max-width: 700px;
-      line-height: 1.6;
-    }
-
-    .main-title {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-      color: #00ffaa;
-    }
-
-    .description {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-    }
-
-    strong { /* For semantic emphasis */
-      font-weight: bold;
-    }
-
-    /* Video Section */
-    .video-container {
-      margin-top: 30px;
-      width: 90%;
-      max-width: 640px;
-      height: 360px;
-      border-radius: 10px;
-      overflow: hidden; /* Ensure iframe respects border-radius */
-    }
-
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    /* Contact Section */
-    .contact {
-      margin-top: 30px;
-      font-size: 0.95rem;
-      color: #aaaaaa;
-    }
-
-    .contact a {
-      color: #00ffaa;
-      text-decoration: none;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
-    }
-
-    /* Footer Section */
-    .footer {
-      margin-top: 50px;
-      font-size: 0.85rem;
-      color: #555;
-    }
-  </style>
+        .logo { max-width: 200px; margin-top: 30px; }
+        .main-title { font-size: 2.5rem; margin-bottom: 15px; color: #00ffaa; }
+        .section-title { font-size: 2rem; margin-top: 40px; margin-bottom: 20px; color: #00ffaa; }
+        .description { font-size: 1.1rem; margin-bottom: 25px; max-width: 700px; line-height: 1.7; }
+        strong { font-weight: bold; color: #00ffaa; }
+        .video-container { margin-top: 30px; width: 90%; max-width: 640px; height: 360px; border-radius: 10px; overflow: hidden; }
+        iframe { width: 100%; height: 100%; border: none; }
+        .contact { margin-top: 40px; font-size: 0.95rem; color: #aaaaaa; }
+        .contact a { color: #00ffaa; text-decoration: none; }
+        .contact a:hover { text-decoration: underline; }
+        .footer { margin-top: 60px; font-size: 0.85rem; color: #555; }
+        .value-proposition ul { list-style: none; padding: 0; max-width: 600px; margin: 20px auto; text-align: left; }
+        .value-proposition ul li { margin-bottom: 10px; }
+        .client-segments ul { list-style: none; padding: 0; max-width: 600px; margin: 20px auto; text-align: left; }
+        .client-segments ul li { margin-bottom: 10px; }
+        .revenue-streams ul { list-style: none; padding: 0; max-width: 600px; margin: 20px auto; text-align: left; }
+        .revenue-streams ul li { margin-bottom: 10px; }
+        .key-activities ul { list-style: none; padding: 0; max-width: 600px; margin: 20px auto; text-align: left; }
+        .key-activities ul li { margin-bottom: 10px; }
+        .key-resources ul { list-style: none; padding: 0; max-width: 600px; margin: 20px auto; text-align: left; }
+        .key-resources ul li { margin-bottom: 10px; }
+    </style>
 </head>
 <body>
 
-  <header class="header">
-    <img src="assets/Logo.jpg" alt="TerrAI Logo" class="logo" />
-    <h1 class="main-title">Welcome to TerrAI</h1>
-  </header>
+    <header class="header">
+        <img src="assets/Logo.jpg" alt="TerrAI Logo" class="logo" />
+        <h1 class="main-title">Inteligencia Artificial para el Análisis Territorial</h1>
+        <p class="description">Transformando datos geoespaciales en información útil para un futuro más inteligente.</p>
+    </header>
 
-  <main class="main-content">
-    <p class="description">
-      TerrAI brings AI-driven land use classification and change detection to your fingertips.
-      Designed for <strong>local governments</strong>, <strong>urban planners</strong> and <strong>environmental experts</strong>.
-    </p>
+    <section class="value-proposition">
+        <h2 class="section-title">Nuestra Propuesta de Valor</h2>
+        <p class="description">Ofrecemos soluciones innovadoras que proporcionan información territorial clave de manera eficiente y accesible:</p>
+        <ul>
+            <li><strong>Informes de Evolución Territorial:</strong> Análisis detallados con mapas descargables (PDF, GeoTIFF) para comprender los cambios en el uso del suelo.</li>
+            <li><strong>Visor WebGIS Interactivo:</strong> Plataforma online intuitiva para visualizar y analizar datos geoespaciales sin necesidad de software especializado.</li>
+            <li><strong>Inteligencia Geoespacial Accesible:</strong> Datos procesados con IA, fáciles de entender y utilizar, incluso sin experiencia técnica en GIS.</li>
+            <li><strong>Análisis Basado en IA:</strong> Detección precisa de cambios y clasificación del uso del suelo mediante aprendizaje automático aplicado a imágenes satelitales.</li>
+            <li><strong>Solución 100% Online:</strong> Acceda a la información desde cualquier navegador, facilitando la colaboración y el análisis remoto.</li>
+        </ul>
+    </section>
+
+    <section class="client-segments">
+        <h2 class="section-title">Nuestros Clientes</h2>
+        <p class="description">Nuestras soluciones están diseñadas para:</p>
+        <ul>
+            <li><strong>Ayuntamientos y Entidades Públicas:</strong> Para la planificación urbana, gestión territorial, control de cambios y justificación de normativas.</li>
+            <li><strong>Técnicos Urbanísticos y Arquitectos:</strong> Para la visualización de áreas de actuación, análisis de contexto y toma de decisiones en proyectos.</li>
+            <li><strong>Consultoras Ambientales:</strong> Para estudios de impacto, análisis de riesgos y seguimiento de cambios ambientales.</li>
+            <li><strong>Empresas de Construcción e Inmobiliarias:</strong> Para la identificación de oportunidades, análisis de mercado y evaluación del desarrollo territorial.</li>
+        </ul>
+    </section>
+
+    <section class="key-activities">
+        <h2 class="section-title">¿Cómo lo Hacemos? (Actividades Clave)</h2>
+        <p class="description">Nuestras principales actividades incluyen:</p>
+        <ul>
+            <li><strong>Procesamiento Avanzado de Imágenes Satelitales:</strong> Utilizando inteligencia artificial para extraer información valiosa.</li>
+            <li><strong>Desarrollo y Mantenimiento de Plataforma WebGIS:</strong> Creando una herramienta intuitiva y accesible.</li>
+            <li><strong>Actualización Continua de Datos e IA:</strong> Asegurando información precisa y modelos de aprendizaje automático optimizados.</li>
+            <li><strong>Soporte al Cliente:</strong> Ofreciendo asistencia para garantizar una experiencia de usuario exitosa.</li>
+        </ul>
+    </section>
+
+    <section class="key-resources">
+        <h2 class="section-title">Nuestros Recursos Clave</h2>
+        <p class="description">Contamos con:</p>
+        <ul>
+            <li><strong>Infraestructura en la Nube:</strong> Utilizando plataformas potentes para el procesamiento y almacenamiento de datos.</li>
+            <li><strong>Algoritmos de Inteligencia Artificial:</strong> Modelos avanzados para la clasificación y detección de cambios.</li>
+            <li><strong>Equipo Especializado:</strong> Profesionales con experiencia en teledetección, IA y desarrollo GIS.</li>
+        </ul>
+    </section>
+
+    <section class="revenue-streams">
+        <h2 class="section-title">¿Cómo Generamos Valor? (Fuentes de Ingresos)</h2>
+        <p class="description">Ofrecemos diferentes modalidades para acceder a nuestra tecnología:</p>
+        <ul>
+            <li><strong>Licencias por Municipio:</strong> Acceso a informes y visor para un área geográfica específica.</li>
+            <li><strong>Licencias con Actualizaciones:</strong> Suscripciones con informes periódicos y soporte continuo.</li>
+            <li><strong>Licencias Empresariales:</strong> Soluciones personalizadas con múltiples accesos y funcionalidades avanzadas.</li>
+        </ul>
+    </section>
 
     <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
     </div>
-  </main>
 
-  <section class="contact">
-    <p>
-      📧 Email: <a href="mailto:tuemail@dominio.com">tuemail@dominio.com</a><br>
-      📞 Phone: <a href="tel:+34123456789">+34 123 456 789</a><br>
-      🔗 LinkedIn: <a href="https://www.linkedin.com/in/tuusuario/" target="_blank" rel="noopener noreferrer">linkedin.com/in/tuusuario</a>
-    </p>
-  </section>
+    <section class="contact">
+        <h2 class="section-title">Contacto</h2>
+        <p class="description">¿Tienes alguna pregunta o te gustaría saber más? ¡Contáctanos!</p>
+        <p>
+            📧 Email: <a href="mailto:contacto@terraigeo.com">contacto@terraigeo.com</a><br>
+            🔗 LinkedIn: <a href="https://www.linkedin.com/company/terraigeo" target="_blank" rel="noopener noreferrer">linkedin.com/company/terraigeo</a>
+        </p>
+    </section>
 
-  <footer class="footer">
-    © 2025 TerrAI – All rights reserved
-  </footer>
+    <footer class="footer">
+        © 2025 TerrAI – Todos los derechos reservados
+    </footer>
 
 </body>
 </html>
