@@ -3,11 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TerrAI</title>
+  <title>TerrAI - AI-Driven Land Use Classification</title>
+  <meta name="description" content="TerrAI: AI-powered solutions for land use classification and change detection. Designed for local governments, urban planners, and environmental experts.">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <style>
-    body {
+    /* CSS Reset (optional, but recommended) */
+    body, h1, h2, p, a, img, iframe {
       margin: 0;
       padding: 0;
+      border: 0;
+      font: inherit;
+      color: inherit;
+      background-color: transparent;
+      box-sizing: border-box; /* Important for consistent sizing */
+    }
+
+    body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       background-color: #0f0f0f;
       color: #ffffff;
@@ -20,48 +31,70 @@
       padding: 20px;
     }
 
-    img {
-      max-width: 200px;
-      margin: 30px 0 20px 0;
+    /* Header Section */
+    .header {
+      margin-top: 30px;
     }
 
-    h1 {
+    .logo {
+      max-width: 200px;
+    }
+
+    /* Main Content Section */
+    .main-content {
+      margin-top: 20px;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+
+    .main-title {
       font-size: 2.8rem;
       margin-bottom: 10px;
       color: #00ffaa;
     }
 
-    p {
+    .description {
       font-size: 1.1rem;
-      max-width: 700px;
       margin-bottom: 20px;
-      line-height: 1.6;
     }
 
-    a {
-      color: #00ffaa;
-      text-decoration: none;
+    strong { /* For semantic emphasis */
+      font-weight: bold;
     }
 
-    a:hover {
-      text-decoration: underline;
+    /* Video Section */
+    .video-container {
+      margin-top: 30px;
+      width: 90%;
+      max-width: 640px;
+      height: 360px;
+      border-radius: 10px;
+      overflow: hidden; /* Ensure iframe respects border-radius */
     }
 
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Contact Section */
     .contact {
       margin-top: 30px;
       font-size: 0.95rem;
       color: #aaaaaa;
     }
 
-    iframe {
-      margin-top: 30px;
-      width: 90%;
-      max-width: 640px;
-      height: 360px;
-      border: none;
-      border-radius: 10px;
+    .contact a {
+      color: #00ffaa;
+      text-decoration: none;
     }
 
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer Section */
     .footer {
       margin-top: 50px;
       font-size: 0.85rem;
@@ -71,27 +104,33 @@
 </head>
 <body>
 
-  <img src="assets/Logo.jpg" alt="TerrAI Logo" />
-  <h1>Welcome to TerrAI</h1>
-  <p>
-    TerrAI brings AI-driven land use classification and change detection to your fingertips. 
-    Designed for <strong>local governments</strong>, <strong>urban planners</strong> and <strong>environmental experts</strong>.
-  </p>
+  <header class="header">
+    <img src="assets/Logo.jpg" alt="TerrAI Logo" class="logo" />
+    <h1 class="main-title">Welcome to TerrAI</h1>
+  </header>
 
-  <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+  <main class="main-content">
+    <p class="description">
+      TerrAI brings AI-driven land use classification and change detection to your fingertips.
+      Designed for <strong>local governments</strong>, <strong>urban planners</strong> and <strong>environmental experts</strong>.
+    </p>
 
-  <div class="contact">
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+    </div>
+  </main>
+
+  <section class="contact">
     <p>
       📧 Email: <a href="mailto:tuemail@dominio.com">tuemail@dominio.com</a><br>
       📞 Phone: <a href="tel:+34123456789">+34 123 456 789</a><br>
-      🔗 LinkedIn: <a href="https://www.linkedin.com/in/tuusuario/" target="_blank">linkedin.com/in/tuusuario</a>
+      🔗 LinkedIn: <a href="https://www.linkedin.com/in/tuusuario/" target="_blank" rel="noopener noreferrer">linkedin.com/in/tuusuario</a>
     </p>
-  </div>
+  </section>
 
-  <div class="footer">
-    &copy; 2025 TerrAI – All rights reserved
-  </div>
+  <footer class="footer">
+    © 2025 TerrAI – All rights reserved
+  </footer>
 
 </body>
 </html>
-
