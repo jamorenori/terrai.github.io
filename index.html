@@ -31,6 +31,26 @@
             padding: 30px;
         }
 
+        .top-navigation {
+            width: 100%;
+            max-width: 850px;
+            padding: 20px 0;
+            display: flex;
+            justify-content: center; /* Centrar los enlaces */
+            gap: 30px; /* Espacio entre los enlaces */
+        }
+
+        .top-navigation a {
+            color: #a9bca9;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .top-navigation a:hover {
+            color: #98fb98;
+        }
+
         .logo-container {
             margin-top: 40px;
             margin-bottom: 40px;
@@ -228,9 +248,37 @@
             font-size: 0.9rem;
             color: #586e58; /* Darker shade of green */
         }
+
+        .request-demo-button {
+            padding: 14px 24px;
+            background-color: #98fb98; /* Light vibrant green button */
+            color: #121812; /* Dark green text on button */
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: bold; /* Botón en negrita */
+            text-decoration: none; /* Para que parezca botón si es un <a> */
+            display: inline-block; /* Para poder aplicar padding y margin */
+            margin-top: 20px;
+        }
+
+        .request-demo-button:hover {
+            background-color: #70db70; /* Slightly darker hover green */
+        }
     </style>
 </head>
 <body>
+
+    <div class="top-navigation">
+        <a href="#services">Services</a>
+        <a href="#works">Works</a>
+        <a href="#about-us">About Us</a>
+        <a href="#campus">Campus TerrAI</a>
+        <a href="#contact">Contact</a>
+        <a href="#blog">Blog</a>
+    </div>
 
     <header class="header">
         <div class="logo-container">
@@ -238,9 +286,10 @@
         </div>
         <h1 class="main-title">**AI-Powered Territorial Analysis**</h1>
         <p class="description">Transforming **geospatial data** into actionable insights for a smarter future.</p>
+        <a href="#request-demo" class="request-demo-button">Request a Demo</a>
     </header>
 
-    <section class="section value-proposition">
+    <section id="value-proposition" class="section value-proposition">
         <h2 class="section-title">Our Value Proposition</h2>
         <p>We offer innovative solutions that provide key **territorial information** efficiently and accessibly:</p>
         <ul>
@@ -252,7 +301,7 @@
         </ul>
     </section>
 
-    <section class="section client-segments">
+    <section id="client-segments" class="section client-segments">
         <h2 class="section-title">Our Clients</h2>
         <p>Our solutions are designed for:</p>
         <ul>
@@ -263,7 +312,7 @@
         </ul>
     </section>
 
-    <section class="section key-activities">
+    <section id="key-activities" class="section key-activities">
         <h2 class="section-title">How We Do It (Key Activities)</h2>
         <p>Our main activities include:</p>
         <ul>
@@ -274,7 +323,7 @@
         </ul>
     </section>
 
-    <section class="section key-resources">
+    <section id="key-resources" class="section key-resources">
         <h2 class="section-title">Our Key Resources</h2>
         <p>We rely on:</p>
         <ul>
@@ -284,7 +333,7 @@
         </ul>
     </section>
 
-    <section class="section revenue-streams">
+    <section id="revenue-streams" class="section revenue-streams">
         <h2 class="section-title">How We Generate Value (Revenue Streams)</h2>
         <p>We offer different ways to access our technology:</p>
         <ul>
@@ -298,23 +347,13 @@
         <iframe src="https://www.loom.com/embed/37ca63f63d7c454fa5f6ef1e8dcdcba9?sid=51fbeee1-a8c2-4258-9eab-a9b3d302e0f1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
 
-    <section class="demo-section">
+    <section id="request-demo" class="demo-section">
         <h2 class="section-title">Request a Demo</h2>
-        <p class="description">See **TerrAI** in action! Fill out the form below to request a personalized demo.</p>
-        <form class="demo-form">
-            <label for="demo-name">Name</label>
-            <input type="text" id="demo-name" name="name" required>
-            <label for="demo-email">Email</label>
-            <input type="email" id="demo-email" name="email" required>
-            <label for="demo-organization">Organization (Optional)</label>
-            <input type="text" id="demo-organization" name="organization">
-            <label for="demo-message">Your Requirements</label>
-            <textarea id="demo-message" name="message" rows="5"></textarea>
-            <button type="submit">Request Demo</button>
-        </form>
+        <p class="description">See **TerrAI** in action! Click the button below to request a personalized demo.</p>
+        <a href="#contact-section" class="request-demo-button">Request a Demo</a>
     </section>
 
-    <section class="contact-section">
+    <section id="contact-section" class="contact-section">
         <h2 class="section-title">Contact Us</h2>
         <p class="description">Have any questions or want to learn more? Reach out to us!</p>
         <p>
@@ -341,5 +380,17 @@
         © 2025 **TerrAI** – All rights reserved
     </footer>
 
-</body>
-</html>
+    <script>
+        // Simple smooth scrolling for top navigation links
+        document.querySelectorAll('.top-navigation a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple smooth scrolling for the Request a Demo button
+        document.querySelector('.
